@@ -16,7 +16,7 @@ export default function Dashboard({ demands, places, trends, regions, analyses }
   const categories = ['전체', ...new Set(places.map(p => p.search_category))];
   const filteredDemands = demands.filter(d => d.region_code === region && (period === 'all' || d.reference_date.startsWith(period)));
   const latest = filteredDemands[0];
-  const filteredPlaces = places.filter(p => p.region_code === region && (category === '전체' || p.search_category === category));
+  const filteredPlaces = places.filter(p => p.region_code != null && (p.region_code === region || region.startsWith(p.region_code)) && (category === '전체' || p.search_category === category));
   const filteredTrends = trends.filter(t => period === 'all' || t.reference_date.startsWith(period));
   const analysis = analyses.find(a => a.region_code === region && (period === 'all' || a.analysis_date.startsWith(period)));
   const regionName = names.get(region) ?? (region === '11' ? '서울특별시' : region);
