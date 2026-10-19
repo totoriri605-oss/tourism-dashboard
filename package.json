@@ -1,0 +1,8 @@
+{
+  "name": "tourism-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {"dev": "next dev --hostname 127.0.0.1", "build": "next build", "start": "next start --hostname 127.0.0.1", "typecheck": "tsc --noEmit"},
+  "dependencies": {"next": "16.4.2", "react": "latest", "react-dom": "latest", "@supabase/supabase-js": "latest", "recharts": "latest"},
+  "devDependencies": {"typescript": "latest", "@types/node": "latest", "@types/react": "latest", "@types/react-dom": "latest", "tailwindcss": "latest", "@tailwindcss/postcss": "latest"}
+}
